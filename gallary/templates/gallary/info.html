@@ -1,0 +1,58 @@
+{% extends "base1.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title%} Details of post{% endblock%}
+</head>
+
+<body>
+	{% block content %}
+	{% if messages %}
+		<div class="message">
+			{% for message in messages %}
+				<p class="{{ message.tags}}">
+					<img src="/static/gallary/key.png">{{message}}
+				</p>
+			{% endfor %}
+		</div>
+	{% endif %}
+		<div class = "info">
+			
+			<img src = "{{ MEDIA_URL}}{{post.img}}" height = 600px width = 80% alt = "post_image">
+			
+
+			<span><h6>Uploaded On:  {{ post.date }}</h6></span>
+			<p> {{ post.post }}</p>
+		
+		</div>
+		<div >
+			{% with comments.count as total_comments %}
+				<p style="background: #20B2AA;color: white; padding: 10px; margin: 0px;">
+					Total Comment(s) {{ total_comments }}
+				</p>
+			{% endwith %}
+		</div>
+		<div class="comment">
+			{% for comment in comments %}
+
+				<hr>
+				<p class="count">
+					Comment {{ forloop.counter }} by {{ comment.name }} {{ comment.date }}
+				</p>
+				<h3>{{ comment.body|linebreaks }}</h3>
+			{% endfor %}
+		</div>
+<div class="drop-comment">
+	<p class = "drop">
+		Drop Your Comments Here
+	</p>
+		<form action="." method="POST">
+			{{ comment_form.as_p }}
+			{% csrf_token %}
+			<button type="submit" value="submit">Post</button>
+		</form>
+	{% endblock%}
+
+</div>
+</body>
+</html>

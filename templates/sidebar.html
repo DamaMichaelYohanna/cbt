@@ -1,0 +1,27 @@
+<div class = "header">
+<div class = "headertext"><span><h5>Latest Photo From PHOTOGallery.com</span></div>
+
+<div class = "headerright">
+	<h5>Most Like and Viewed</h5>
+	<div class = "inner-hright">
+		<h6>ama zai yi kwa?</h5>
+		<img src = "/static/gallary/sum.jpg" width = 92% height = 200px alt = 'dama'>
+		<h5> this is the first inner right</h5>
+	</div>
+	<h5>Recently Uploaded</h5>
+	<div class = "inner-hright">
+		<h6>This are the picture that are recently uploaded?</h5>
+		{% for post in recent %}
+		<a href = "{{ post.id }}">view</a>
+		<img src = " {{MEDIA_URL}}{{ post.img }}" width = 95% height = 100px alt = 'dama'>
+		{% endfor%}
+		<h5>ama zai yi kwa?</h5>
+	</div>
+	<h5>Upload new picture</h5>
+	<form action = "" method = "POST"> 
+	{{ form.as_p}}
+	{% csrf_token %}
+	<button type = "submit" value = "submit">upload</button>
+	</form>
+</div>
+</div>

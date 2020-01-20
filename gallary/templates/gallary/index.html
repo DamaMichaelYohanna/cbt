@@ -1,0 +1,28 @@
+{% extends "base1.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}PhotoGallery Home {% endblock %}
+</head>
+
+<body>
+	{% block content %}
+
+
+		<div class="bo">
+			<h3>Latest Update From Photo Gallery</h3>
+
+	
+			{% for post in objects %}
+				<div class="inner">
+					<img src="{{ post.img.url }}" > <h2 style="">{{ post.post|truncatewords:10 }} </h2>
+					<h6>{{post.date}}</h6>
+					<p><a href="{{post.pk}}">Read more...</a></p>
+			
+				</div>
+			{% endfor %}
+			{% include "pagination.html" with page=objects %}
+		</div>
+	{% endblock %}
+</body>
+</html>

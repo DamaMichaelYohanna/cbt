@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title%}Image of details{%endblock%}
+{% block content %}
+{% include "sidebar.html"%}
+<div class = "left">
+<img src = "{{ MEDIA_URL}}{{post.img}}" height = 800px width = 100% alt = "post_image">
+<h5> {{ post.post }}</h5>
+
+<span><h6>Uploaded On:  {{ post.date }}</h6></span>
+</div>
+{% endblock %}

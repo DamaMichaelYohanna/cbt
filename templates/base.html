@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head> 
+	<title>{% block title%}Gallary Home{% endblock %} </title>
+	<link rel="stylesheet" type="text/css" href="/static/gallary/base.css">
+</head>
+<body>
+<div class = "first"><h3>PHOTOGallery</h3></div>
+{% block content %}
+
+{% endblock %}
+
+<div class = "col-sm-7 offset-sm-1 gallary-sidebar">
+	{% block sidebar%} {% endblock %}
+</body>
+</html>

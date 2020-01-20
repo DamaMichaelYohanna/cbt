@@ -1,0 +1,22 @@
+{% extends "base1.html" %}
+{% block title %}Image Upload {% endblock %}
+
+{% block content %}
+{% if messages %}
+	<div class="messages">
+		{% for message in messages %}
+			<p class="{{ message.tags }}">
+				<img src="/static/gallary/key.png">  {{message}}
+			</p>	
+		{% endfor %}
+	</div>
+{% endif %}
+<div style="height: 400px;">
+<p>Upload an image here. Note your post will be review before publish</p>
+<form action="." method="POST" enctype="multipart/form-data">
+{{ upload_form.as_p }}
+{% csrf_token %}
+<button value="submit" type="submit">Upload</button>
+</form>
+</div>
+{% endblock %}

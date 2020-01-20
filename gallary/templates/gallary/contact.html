@@ -1,0 +1,18 @@
+{% extends "base1.html" %}
+{% block title%} contact_us {% endblock %}
+
+{% block content %}
+<p style="color: #20B2AA;">Send us email</p>
+<form action="." method="POST">
+{{ form.as_p }}
+<button type="submit" value="submit">Send</button>
+{% csrf_token %}
+</form>
+<p class="drop">
+	Contact via social media
+</p>
+	<a href="facebook.com/gallary" ><img src="/static/gallary/fb.png" style="padding-left: 20px; height: 80px; width: 80px;">connect via facebook</a>
+	<a href="tweeter.com/gallary"><img src="/static/gallary/sm.png" style="padding-left: 20px; height: 80px; width: 80px;">connect via tweeter</a>
+	<a href="instagram.com/gallary"><img src="/static/gallary/in.png" style="padding-left: 20px; height: 80px; width: 80px;">Hook up on instagram</a>
+
+{% endblock %}

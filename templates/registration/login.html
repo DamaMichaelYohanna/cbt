@@ -1,0 +1,13 @@
+{% extends "base1.html" %}
+{% block content %}
+<div class="login">
+	<p>Enter your login details below</p>
+	<form action="" method = "POST">
+	{{ form.as_p }}
+	<input type="submit" name="login" value="login">
+	{% csrf_token %}
+	</form>
+	<p>Don't have an account? Register <a href="/gallary/register/">Here</a></p>
+	<p>Forgot your password? recover <a href = "">Here</a></p>
+</div>
+{% endblock%}

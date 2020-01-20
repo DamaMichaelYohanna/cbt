@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Photo gallary{% endblock %}
+
+{% block content %}
+
+<!--<img src = "/static/gallary/sum.jpg" width = 100% height = 600px alt = 'dama'>!-->
+
+
+<!--
+<h4>Welcome to our world of wonderfull and most colorfull image gallay. Take your time and browse through our collection of images especially the most trending, most liked and shared. finally do make sure, you invite your familly  and friends to also view from our collections. Thanks, and Enjoy!</h4>
+<hr>!-->
+{% include "sidebar.html" %}
+
+<div class = container>
+<div
+
+
+{% for item in posts %}
+
+	<div class = inner-container>
+		<h5>{{ item.post|truncatewords:"5"}}</h6>
+		<img src = "{{MEDIA_URL}}{{ item.img }}" height = 250px width = 250px alt = 'dama'>
+		
+		<div class = "date"><a href = ""> View more</a> 
+			<a href ="dama">share  </a>..
+			<a href link ="dama">like  </a>..
+			<a href ="{{item.pk}}">learn more</a>
+		</div>
+		</hr>
+	</div>
+
+{% endfor %}
+</div>
+
+</div>
+
+<div class = "paginator">
+{% include "pagination.html" with page=posts %}
+</div>
+{% endblock %}
+</div>
+</div>
+{% block sidebar %}
+</div>
+<p>
+
+</p>
+{% endblock%}
+
+</div>
+hello guys
+

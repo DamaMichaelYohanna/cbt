@@ -1,0 +1,39 @@
+{% load static %}
+<head>
+	<title>{% block title%} {% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="/static/gallary/base1.css">
+</head>
+<body>
+	{% block head %}
+		<a href="/gallary/index/"><img src="/static/gallary/home.jpg" style="padding-left: 0px; height: 80px; width: 200px;"></a>
+
+		<a href="/gallary/upload/" style="margin-left: 790px; color:#20b2aa;">Upload image<img src="/static/gallary/gallery.png" style="padding-left: 20px; height: 80px; width: 80px;"></a>
+		<div class="head">
+			<div class="inn">
+		{% if user.is_authenticated %}
+			<a href="/gallary/logout/">Logout({{user.first_name}} {{user.last_name }})</a>
+		{% else %}
+			<a href="/gallary/login/">Join PhotoGallery Community</a>
+		{% endif %}
+		</div>
+		<div class="inn">
+			<a href="/gallary/contact/"> Contact Us</a>
+		</div>
+		<div class="inn">
+			<a href="">Frequently Ask Questions (FAQ)</a>
+		</div>
+	</div>
+	{% endblock %}
+	
+	{% block content %}
+
+	{% endblock %}
+
+	{% block foot %}
+
+		<p class="about">Curious about this Website? <br><b><a href="">Check is out </a></b></p>
+		<hr style="margin:0px;">
+		<p class ="last"> © 2019. This site was design and maintained by <b>Dama Michael Yohanna</b> and is being <br> sponsored by <b>Mr solomon.</b><br>For comment, observation,information, promotion and contribution,<br>use the <b><a href ="/gallary/contact/">Contact Us</a></b> panel above THANKS</p>
+
+	{% endblock%}
+</body>

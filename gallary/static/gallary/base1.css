@@ -1,0 +1,231 @@
+body{
+			margin: 0px;
+			padding-top: 0px;
+			
+		}
+		.head{
+			background: #66CDAA;
+
+			width:auto;
+			margin: 0px;
+
+		}
+p{
+	color: #20B2AA;
+}
+
+		.inn{
+			background: #20B2AA;
+			width: 28%;
+			display: inline-flex;
+			margin:0px;
+			padding: 30px;
+			padding-left: 38px;
+		}
+		.inn a{
+			padding:0px;
+			font-size:20px;
+			text-decoration: none;
+			background: #20B2AA;
+			color: white;}
+			
+		.bo{
+
+			background: #DCDCDC;
+			margin: 0px;
+			padding:3px;
+			height: auto;
+			min-height: 500px;
+		}
+		.bo h3{
+			font-weight: lighter;
+			color: grey;
+			padding-left: 10px;
+			padding-top: 5px;
+		}
+		.da{
+			width:3%;
+			margin-left: 0px; 
+			background: red;
+			color: black;
+		}
+		.da h4,h5{
+			margin:0px;
+			display: inline;
+		}
+		
+		.inner {
+			background: white;
+			padding:4;
+		
+			margin-left: 130px;
+			margin-bottom: 50px;
+			color: #20B2AA;
+			width:80%;
+			max-height: 50px;
+			padding-bottom: 40px;
+			
+
+		}
+		.inner img {
+			padding-left: 1px;
+			padding-top:1px;
+			padding-right: 20px;
+			height:50px; 
+			width:85px;
+		}
+		.inner h2{
+			padding:0px;
+			display: inline;
+			font-weight: lighter;
+
+		}
+		.inner h6{
+			display: inline;
+			text-align: right;
+			color: #20B2AA;
+			
+			font-weight: lighter;
+			margin-right: 20px;
+		}
+		.inner a{
+			padding:0;
+			width:130px;
+			height: 30px;
+			text-decoration: none;
+			background:#20B2AA;
+			color: white;
+			float:right;
+			margin-right: 25px;
+			border-radius: 3px;
+		}
+		.inner a:hover{text-decoration: underline;}
+		p.about{
+			margin:0px;
+			font-size: 23px;
+			color:white;
+			text-align: center;
+			background:#20B2AA;
+			padding:50px;
+			padding-bottom: 30px;
+		}
+		p.about a{
+			font-size: 30px;
+			background: #20B2AA;
+			padding-left: 100px;
+			padding-right: 60px;
+			color:white;
+			text-decoration: none;
+			text-align: center;
+		}
+		p.last{
+			text-align: center;
+			line-height: 20px;
+			font-size: 15px;
+			margin-top: 50px;
+		}
+		
+/* the details page css*/		
+	.info{
+
+		display: block;
+		color: #20B2AA;;
+		background: #f5f5f5;
+		text-align: center;
+		height: auto;
+		min-height: 200px;
+		text-decoration: none;
+	}
+		.info h5,h6{
+			padding:25px;
+		}
+		.info p{
+			background: white;
+
+		}
+
+.comment{
+	min-height:50px
+}
+	.comment hr{
+		margin: 0px;
+		color: #f5f5f5;"
+	}
+	.comment h3{
+		 text-align: center;
+		 color:#20B2AA;
+	}
+	p.count{
+		color: #20B2AA;
+		background: #f5f5f5;
+		text-decoration:overline;
+		padding: 4px;
+		text-align: center;
+		margin:0px; 
+		font-size: 20px;
+	}
+	p.drop {
+		background: #20B2AA;
+		color: white;
+		padding: 10px;
+	}
+	label{
+		color: #20b2aa;
+		padding: 50px;
+	}
+	input,textarea{
+		width:70%;
+	}
+	button{
+		text-align:center;
+		margin-left: 45%;
+	}
+/* the login page csss*/
+.login{
+	text-align: center;
+	color: #20B2AA;
+	height: 400px;
+}
+.errorlist{
+	color: red;
+	border: 1px solid red;
+	padding:10px;
+}
+.login input,label{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.login a{
+	background: green;
+	margin:10px;
+	color:white;
+	padding:4px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.login a:hover{
+	text-decoration: underline;
+}
+.register{
+	text-align: center;
+	color: #20B2AA;
+	height:auto;
+}
+.register input,label{
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+/* messages css*/
+p.success{
+	background: aliceblue;
+	color: black;
+	padding: 10px 10px 10px 65px;
+	font-weight: 400;
+	margin-top: 0px;
+	font-size: 13px;
+}
+p.success img{
+	 width:17px;
+	 height:17px;
+}
